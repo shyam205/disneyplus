@@ -77,6 +77,12 @@ export default function Home({ videos, account }) {
     return videos.filter((video) => video.tags.includes(genre))
    }
 
+   const filterHeroVideos = (videos, genre) => {
+    return videos.filter((video) => video.tags.includes('New'))
+   }
+
+    console.log("filterHeroVideos",filterHeroVideos(videos));
+
    const unSeenVideos = (videos) => {
     return videos.filter(video => video.seen == false || video.seen == null)
 }
@@ -85,39 +91,40 @@ export default function Home({ videos, account }) {
     <div className="app">
       <NavBar account={account} />
       <div className="main-video">
-        <Heroslider videos={videos} />
+        <Heroslider videos={videos} genre={'New'} />
         {/* <img src={randomVideo(videos).thumbnail.url} alt={randomVideo(videos).title} />   */}
       </div>
       <div className="video-feed">
       <div className="video-feed-logo">
                     <Link href="#disney">
                         <div className="franchise" id="disney">
-                            <Image src={disneyLogo}/>
+                            <Image src={disneyLogo} height={125} width={170} />
                         </div>
                     </Link>
                     <Link href="#pixar">
                         <div className="franchise" id="pixar">
-                            <Image src={pixarLogo}/>
+                            <Image src={pixarLogo} height={125} width={170} />
                         </div>
                     </Link>
                     <Link href="#star-wars">
                         <div className="franchise" id="star-wars">
-                            <Image src={starwarsLogo}/>
+                            <Image src={starwarsLogo} height={125} width={170} />
                         </div>
                     </Link>
                     <Link href="#nat-geo">
                         <div className="franchise" id="nat-geo">
-                            <Image src={natgeoLogo}/>
+                            <Image src={natgeoLogo} height={125} width={170} />
                         </div>
                     </Link>
                     <Link href="#marvel">
                         <div className="franchise" id="marvel">
-                            <Image src={marvelLogo}/>
+                            <Image src={marvelLogo} height={125} width={170} />
                         </div>
                     </Link>
                 </div>
       <Section genre={'Recommended for you'} videos={unSeenVideos(videos)}/>
-        <Section genre={'Family'} videos={filterVideos(videos, 'family')} /> 
+       {/* <Section genre={'Latest'} videos={filterVideos(videos, 'Latest')} />  */}
+        {/* <Section genre={'Latest'} videos={filterVideos(videos, 'Latest')} />  */}
         <Section genre={'thriller'} videos={filterVideos(videos, 'thriller')} />
         <Section genre={'classic'} videos={filterVideos(videos, 'classic')} />
         <Section genre={'Pixer'} videos={filterVideos(videos, 'family')} /> 

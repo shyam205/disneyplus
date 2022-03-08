@@ -1,10 +1,11 @@
 import { GraphQLClient } from 'graphql-request'
 
-export default async ({ body}, res) => {
+export default changeToSeen =  async ({ body}, res) => {
     const url = process.env.ENDPOINT
     const graphcms = new GraphQLClient(url, {
         headers: { "Authorization" : `Bearer ${process.env.GRAPH_CMS_TOKEN}`}
     })
+    
 
     await graphcms.request(
         `

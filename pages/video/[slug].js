@@ -70,7 +70,8 @@ const Video = ({ video }) => {
         
             {!watching && <img className="video-image" src={video?.thumbnail.url} alt={video.title}/>}
             {!watching && <div className="info">
-                <h2>{video.tags.join(', ')}</h2>
+                <h2>{video.title}</h2>
+                <h3>{video.tags.join(', ')}</h3>
                 <p>{video.description}</p>
                 <Link href="/">go back</Link>
                 <button

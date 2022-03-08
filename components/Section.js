@@ -8,7 +8,7 @@ const Section = ({genre, videos}) => {
             <div className='video-feed-section'>
              {videos?.map(video => (
                  <Link key={video.id} href={`/video/${video.slug}`}>
-                     <Card thumbnail={video.thumbnail} />
+                     <Card video={video} />
                  </Link>
                  
              ))}

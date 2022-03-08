@@ -1,9 +1,10 @@
-import Image from 'next/Image'
+import Image from 'next/Image';
+import Link from 'next/Link';
 
-const Card =({ thumbnail}) => {
+const Card =({ video }) => {
     return (
         <div className="thubmanilimage">
-              <Image className="card" src={thumbnail.url} alt={thumbnail.title} />
+             <Link href={`/video/${video.slug}`} ><Image className="card" src={video.thumbnail.url} alt={video.thumbnail.title} height={125} width={170} /></Link>
         </div>
     )
     

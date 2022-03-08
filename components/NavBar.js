@@ -16,14 +16,14 @@ const NavBar = ({account}) => {
                         <li>Movies</li>
                         <li>Sports</li>
                         <li>Disney+</li>
-                        <li><Image src={KidsLogo} alt="logokids" /></li>
+                        <li><Image src={KidsLogo} alt="logokids" height={25} width={30} /></li>
                     </ul>
                 </div>
             </div>
 
             <div className="account-info">
                 <p> {account.username}</p>
-                <Image className="avatar" src={account.avatar.url}/>
+                <Image className="avatar" src={account.avatar.url} height={25} width={25}  />
             </div>
         </div>
     )

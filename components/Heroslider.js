@@ -6,7 +6,8 @@ import Link from 'next/Link';
 import Image from 'next/Image'
 
 function Heroslider(props) {
-  
+  const allvideos = props.videos;
+  const herovideo = allvideos.filter(video => video.tags.includes('New'));
     const settings = {
         dots: true,
         infinite: true,
@@ -24,7 +25,7 @@ function Heroslider(props) {
       <div className='heroslider'>
             <div className='heroslider-container'>
                 <Slider {...settings}>
-                     { props.videos.map((x,i) => {
+                     { herovideo.map((x,i) => {
                          return <div key={i} className="img-card">
                              <div className='herosliderinfo'>
                              <h2>{x.title}</h2>
@@ -32,7 +33,7 @@ function Heroslider(props) {
                              <Link href={`/video/${x.slug}`}>Watch Now</Link>
                          </div>
                          <div className='backgroungimg'>
-                              <Image src={x.thumbnail.url} alt="new_trend" />
+                              <Image src={x.thumbnail.url} alt="new_trend" layout='fill' objectFit='contain' objectPosition='right' />
                          </div>
                          
                      </div>
