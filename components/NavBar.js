@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/Image'
+import Image from 'next/image'
 import logo from '../public/disney-hotstar-logo-dark.svg';
 import KidsLogo from '../public/kids-logo.svg';
 import Bar from '../public/bars-solid.svg';
