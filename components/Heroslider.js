@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from 'next/Link';
+import Image from 'next/Image'
 
 function Heroslider(props) {
   
@@ -31,7 +32,7 @@ function Heroslider(props) {
                              <Link href={`/video/${x.slug}`}>Watch Now</Link>
                          </div>
                          <div className='backgroungimg'>
-                              <img src={x.thumbnail.url} alt={x.slug} />
+                              <Image src={x.thumbnail.url} alt="new_trend" />
                          </div>
                          
                      </div>
