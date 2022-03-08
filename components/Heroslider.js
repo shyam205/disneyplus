@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Link from 'next/Link';
+import Link from 'next/link'
 import Image from 'next/Image'
 
 function Heroslider(props) {

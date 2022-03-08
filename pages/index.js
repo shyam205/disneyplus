@@ -1,5 +1,5 @@
 import { gql, GraphQLClient } from "graphql-request";
-import Link from 'next/Link'
+import Link from 'next/link'
 import Image from 'next/Image'
 import NavBar from "../components/NavBar";
 import Section from "../components/Section";
@@ -77,11 +77,6 @@ export default function Home({ videos, account }) {
     return videos.filter((video) => video.tags.includes(genre))
    }
 
-   const filterHeroVideos = (videos, genre) => {
-    return videos.filter((video) => video.tags.includes('New'))
-   }
-
-    console.log("filterHeroVideos",filterHeroVideos(videos));
 
    const unSeenVideos = (videos) => {
     return videos.filter(video => video.seen == false || video.seen == null)

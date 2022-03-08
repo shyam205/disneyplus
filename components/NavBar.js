@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 import Image from 'next/Image'
 import logo from '../public/disney-hotstar-logo-dark.svg';
 import KidsLogo from '../public/kids-logo.svg';
