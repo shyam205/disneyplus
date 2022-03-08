@@ -72,7 +72,7 @@ const Video = ({ video }) => {
             {!watching && <div className="info">
                 <h2>{video.tags.join(', ')}</h2>
                 <p>{video.description}</p>
-                <link href="/"><p>go back</p></link>
+                <Link href="/">go back</Link>
                 <button
                     className="video-overlay"
                     onClick={() => {
