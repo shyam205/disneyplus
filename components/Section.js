@@ -1,3 +1,4 @@
+import Link from 'next/Link';
 import Card from './Card';
 const Section = ({genre, videos}) => {
  
@@ -6,9 +7,9 @@ const Section = ({genre, videos}) => {
             <h3>{genre}</h3>
             <div className='video-feed-section'>
              {videos?.map(video => (
-                 <a key={video.id} href={`/video/${video.slug}`}>
+                 <Link key={video.id} href={`/video/${video.slug}`}>
                      <Card thumbnail={video.thumbnail} />
-                 </a>
+                 </Link>
                  
              ))}
             </div>
