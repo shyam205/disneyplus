@@ -117,15 +117,12 @@ export default function Home({ videos, account }) {
                         </div>
                     </Link>
                 </div>
-      <Section genre={'Recommended for you'} videos={unSeenVideos(videos)}/>
-       {/* <Section genre={'Latest'} videos={filterVideos(videos, 'Latest')} />  */}
-        {/* <Section genre={'Latest'} videos={filterVideos(videos, 'Latest')} />  */}
-        <Section genre={'thriller'} videos={filterVideos(videos, 'thriller')} />
+      {/* <Section genre={'Recommended for you'} videos={unSeenVideos(videos)}/> */}
+       <Section genre={'latest'} videos={filterVideos(videos, 'latest')} /> 
+       <Section genre={'popular'} videos={filterVideos(videos, 'popular')} />
         <Section genre={'classic'} videos={filterVideos(videos, 'classic')} />
         <Section genre={'Pixer'} videos={filterVideos(videos, 'family')} /> 
-        <Section genre={'Marvel'} videos={filterVideos(videos, 'thriller')} /> 
         <Section genre={'Disney'} videos={filterVideos(videos, 'disney')} /> 
-        <Section genre={'Star Wars'} videos={filterVideos(videos, 'star-wars')} /> 
       </div>
     </div>
   )

@@ -198,24 +198,25 @@ video {
   width: 100%;
 }
 .thubmanilimage{
-  height:170px;
-  width: 130px;
+  height: 230px !important;
+  width: 180px !important;
   padding: 5px;
   
 }
 .thubmanilimage span{
-  height:170px !important;
-  width: 130px !important;
+  height: 230px !important;
+  width: 180px !important;
 }
 .thubmanilimage img{
   height: 100%;
   width:100%;
   object-fit: cover;
   object-position: center;
+  cursor: pointer;
 }
-.thubmanilimage img:hover{
+/* .thubmanilimage img:hover{
   transform: scale(1.5);
-}
+} */
 .video-player .info-footer{
   height: 0 !important;
 }
@@ -223,4 +224,12 @@ video {
   display: block;
   margin-top: 20px;
   cursor: pointer;
+}
+
+.video-feed-section{
+  padding: 0 2vw;
+}
+
+.section h3{
+  margin-left: 2vw !important;
 }
