@@ -89,6 +89,9 @@ a {
   margin: 5px;
   border-radius: 10px;
 }
+.video-feed{
+  padding-bottom: 50px;
+}
 .video-feed-section{
   display: flex;
 }
@@ -225,11 +228,64 @@ video {
   margin-top: 20px;
   cursor: pointer;
 }
-
+.video-feed-section-container{
+  overflow: hidden;
+}
 .video-feed-section{
   padding: 0 2vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.video-feed-section::-webkit-scrollbar{
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
 }
 
 .section h3{
   margin-left: 2vw !important;
+}
+
+.account-info p{
+  margin-right: 20px;
+}
+.account-info img{
+  height:30px;
+  width: 30px;
+}
+
+@media (max-width:1024px){
+   .main-video, .img-card{
+     height: 40vh;
+   }
+}
+
+@media(max-width:480px){
+  .main-video, .img-card {
+    height: 60vh;
+    width: 500px;
+  }
+  
+  .video-feed{
+    width: 500px;
+  }
+  .herosliderinfo{
+    width: 100%;
+  }
+  .herosliderinfo h2{
+    margin-top: 115px;
+    font-size: 23px;
+  }
+  .herosliderinfo p{
+    display: none;
+  }
+  .navbar{
+    width: 500px;
+    height: 60px;
+  }
+  .nav-section{
+    display: none;
+  }
 }
